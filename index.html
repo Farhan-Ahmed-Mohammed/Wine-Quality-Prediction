@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Quality Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="glass-card">
+    <h1>🍷 Wine Quality Prediction</h1>
+    <p>Multi-Class Classification using XGBoost</p>
+
+    <form action="/predict" method="post" class="form-grid">
+
+        <input type="text" name="fixed_acidity" placeholder="Fixed Acidity" required>
+        <input type="text" name="volatile_acidity" placeholder="Volatile Acidity" required>
+        <input type="text" name="citric_acid" placeholder="Citric Acid" required>
+        <input type="text" name="residual_sugar" placeholder="Residual Sugar" required>
+        <input type="text" name="chlorides" placeholder="Chlorides" required>
+        <input type="text" name="free_sulfur_dioxide" placeholder="Free Sulfur Dioxide" required>
+        <input type="text" name="total_sulfur_dioxide" placeholder="Total Sulfur Dioxide" required>
+        <input type="text" name="density" placeholder="Density" required>
+        <input type="text" name="pH" placeholder="pH" required>
+        <input type="text" name="sulphates" placeholder="Sulphates" required>
+        <input type="text" name="alcohol" placeholder="Alcohol" required>
+
+        <button type="submit">Predict Quality</button>
+    </form>
+
+    {% if prediction_text %}
+        <div class="result-box">
+            {{ prediction_text }}
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* Animated Gradient Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #8e2de2, #4a00e0, #2575fc, #6a11cb);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    color: white;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Grid Layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Input Boxes */
+input {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+/* Button */
+button {
+    grid-column: span 2;
+    padding: 14px;
+    background: #ff4b2b;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff416c;
+    transform: scale(1.05);
+}
+
+/* Result Box */
+.result-box {
+    margin-top: 25px;
+    padding: 15px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
